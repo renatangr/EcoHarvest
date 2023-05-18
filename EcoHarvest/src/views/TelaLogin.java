@@ -27,9 +27,10 @@ public class TelaLogin extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        lblInserirLogin = new javax.swing.JLabel();
+        lblInserirSenha = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        lblLogoLogin = new javax.swing.JLabel();
         lblLogin = new javax.swing.JLabel();
         lblFundoLogin = new javax.swing.JLabel();
 
@@ -40,30 +41,39 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        lblInserirLogin.setText("Insira sua credencial");
+
+        lblInserirSenha.setText("Insira sua senha");
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 384, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblInserirSenha)
+                    .addComponent(lblInserirLogin))
+                .addContainerGap(264, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 244, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(lblInserirLogin)
+                .addGap(41, 41, 41)
+                .addComponent(lblInserirSenha)
+                .addContainerGap(147, Short.MAX_VALUE))
         );
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 60, 390, 250));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 150, 10));
         getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 170, 10));
 
-        lblLogoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/logo-ecoharvest.jpeg"))); // NOI18N
-        getContentPane().add(lblLogoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 20, 360));
-
         lblLogin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         lblLogin.setForeground(new java.awt.Color(0, 51, 0));
         lblLogin.setText("Login");
         getContentPane().add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
-
-        lblFundoLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagens/fundo.png"))); // NOI18N
         getContentPane().add(lblFundoLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 480, 360));
 
         pack();
@@ -109,7 +119,8 @@ public class TelaLogin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblFundoLogin;
+    private javax.swing.JLabel lblInserirLogin;
+    private javax.swing.JLabel lblInserirSenha;
     private javax.swing.JLabel lblLogin;
-    private javax.swing.JLabel lblLogoLogin;
     // End of variables declaration//GEN-END:variables
 }
